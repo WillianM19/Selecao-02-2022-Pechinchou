@@ -33,14 +33,15 @@ export default function Login(){
 
     return(
         <main className={styles.login}>
-            <h1>Fazer Login</h1>
-            <form>
-                <input type="text" placeholder="Seu Email..." required onChange={(e) => setEmail(e.target.value)}></input>
-                <input type="password" placeholder="Sua Senha..." required onChange={(e) => setPassword(e.target.value)}></input>
-                <input type="submit" value="Entrar" onClick={iniciarSessao}></input>
-            </form>
-
-            <p>Ainda não tem conta? <Link href="/cadastro"><a>Registre-se</a></Link></p>
+            <div className={styles.loginForm}>
+                <h1>Fazer Login</h1>
+                <form>
+                    <input type="text" placeholder="Seu Email..." required onChange={(e) => setEmail(e.target.value)}></input>
+                    <input type="password" placeholder="Sua Senha..." required onChange={(e) => setPassword(e.target.value)}></input>
+                    <input type="submit" value="Entrar" onClick={iniciarSessao}></input>
+                </form>
+                <p>Ainda não tem conta? <Link href="/cadastro"><a>Registre-se</a></Link></p>
+            </div>
         </main>
     )
 }
