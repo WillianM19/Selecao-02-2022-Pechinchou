@@ -1,4 +1,6 @@
 .footer{
-    background-color: #49793d;
+    background-color: white;
+    color: var(--main-color);
     min-height: 300px;
+    box-shadow: -1px -1px 4px 2px rgba(0, 0, 0, 0.123);
 }

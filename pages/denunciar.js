@@ -60,7 +60,8 @@ export default function Denunciar(){
     if (activeUser != null){
         return(
             <main className={styles.denunciar}>
-                <h1>Denunciar</h1>
+                <h1>Olá {activeUser.name}!</h1>
+                <p>Preencha os campos abaixo para fazer sua denúncia.</p>
                 <form>
                     <input type="text" placeholder="Titulo da denúncia..." onChange={(e) => setTitle(e.target.value)}/>
                     <input type="date" onChange={(e) => setDate(e.target.value)}/>
