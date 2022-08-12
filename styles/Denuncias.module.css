@@ -1,0 +1,10 @@
+.denuncias {
+    padding: 10px 20px;
+    min-height: 70vh;
+}
+.denunciasConteiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}

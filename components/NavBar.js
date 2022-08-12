@@ -2,6 +2,7 @@ import styles from '../styles/NavBar.module.css'
 import Link from 'next/link'
 
 export default function NavBar(){
+
     return (
         <header className={styles.navbar}>
             <h1>Green Save</h1>

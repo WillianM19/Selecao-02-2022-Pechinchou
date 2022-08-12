@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styles from '../styles/Cadastro.module.css'
 
 export default function Cadastro(){
     //Variáveis
@@ -57,7 +58,7 @@ export default function Cadastro(){
     }
 
     return(
-        <main>
+        <main className={styles.cadastro}>
             <h1>Cadastro</h1>
             <form>
                 <input type="text" placeholder="Nome" required onChange={(e) => setName(e.target.value)}/>

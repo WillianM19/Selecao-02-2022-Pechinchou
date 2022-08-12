@@ -88,7 +88,7 @@ export default function Denunciar(){
         )
     } else { //Não logado
         return (
-            <main>
+            <main className={styles.denunciar}>
                 <h1>Você precisa estar logado para fazer uma denúncia</h1>
             </main>
         )

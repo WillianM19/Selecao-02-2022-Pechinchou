@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.home}>
       <h1>Página inicial</h1>
     </main>
   )

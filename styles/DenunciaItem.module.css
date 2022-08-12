@@ -1,3 +1,16 @@
 .denunciaItem {
+    background-color: white;
+    border: 1px solid green;
     
+    width: 400px;
+    border-radius: 10px;
+    transition: .2s;
+
+    padding: 10px 20px;
+    min-height: 70vh;
+}
+
+.denunciaItem:hover {
+    transform: scale(1.02);
+    transition: .2s;
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from '../styles/Login.module.css'
 import {useState} from 'react'
 
 export default function Login(){
@@ -31,7 +32,7 @@ export default function Login(){
     }
 
     return(
-        <main>
+        <main className={styles.login}>
             <h1>Fazer Login</h1>
             <form>
                 <input type="text" placeholder="Seu Email..." required onChange={(e) => setEmail(e.target.value)}></input>
