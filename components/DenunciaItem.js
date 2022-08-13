@@ -4,12 +4,28 @@ export default function DenunciaItem({item}){
     return(
         <div className={styles.denunciaItem}>
             <h2>{item.title}</h2>
-            <p>Data: {item.date}</p>
-            <p>Local: {item.place}</p>
-            <p>Longitude: {item.longitude}</p>
-            <p>Latitude: {item.latitude}</p>
-            <p>Tipo de Denúncia: {item.type}</p>
-            <p>Descrição: {item.description}</p>
+            <p><strong>Tipo de Denúncia: </strong><span className={styles.denunciaTipo}> {item.type}</span></p>
+            <br/>
+            <p><strong>Hora: </strong>{item.time} <strong>Data:</strong> {item.date}</p>
+            <p><strong>Local:</strong> {item.place}</p>
+            <p><strong>Longitude:</strong> {item.longitude}</p>
+            <p><strong>Latitude:</strong> {item.latitude}</p>
+            <br/>
+            <p><strong>Denúncia Criada por:</strong> {item.user}</p>
+            <br/>
+            <p><strong>Descrição:</strong></p>
+            <div className={styles.description}>
+                <p>{item.description}</p>
+                <br/>
+            </div>
+
+            {(item.userid == JSON.parse(localStorage.getItem("activeUser")).id) ? (
+                <p>Você pode editar esta denuncia</p>
+            ) : (
+                <></>
+            )
+
+            }
         </div>
     )
 }

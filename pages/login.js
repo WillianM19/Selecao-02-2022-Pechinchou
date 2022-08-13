@@ -40,7 +40,7 @@ export default function Login(){
                     <input type="password" placeholder="Sua Senha..." required onChange={(e) => setPassword(e.target.value)}></input>
                     <input type="submit" value="Entrar" onClick={iniciarSessao}></input>
                 </form>
-                <p>Ainda não tem conta? <Link href="/cadastro"><a>Registre-se</a></Link></p>
+                <p>Ainda não tem uma conta? <Link href="/cadastro"><a>Cadastre-se</a></Link></p>
             </div>
         </main>
     )

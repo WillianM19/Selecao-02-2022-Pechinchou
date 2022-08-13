@@ -10,15 +10,24 @@
 }
 .navbar nav{
     display: flex;
+    align-items: center;
     gap: 60px;
 }
 
 .navbar ul{
     display: flex;
-    gap: 30px;
+    gap: 20px;
 
     list-style: none;
     font-weight: 700;
+}
+
+.sectionItens li{
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 10px;
 }
 .navbar li{
     filter: opacity(.8);

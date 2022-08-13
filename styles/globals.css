@@ -19,7 +19,7 @@ header a {
   text-decoration: none;
 }
 
-input {
+input, select {
   padding: 1px 10px;
   color: #EEE;
   font-weight: 700;
@@ -33,6 +33,15 @@ input {
 
 input::placeholder {
   color: rgba(238, 238, 238, 0.589);
+}
+
+textarea {
+  background-color: #eee;
+  color: #333;
+  font-size: 14pt;
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
 }
 
 a {

@@ -1,4 +1,54 @@
 .cadastro {
     padding: 10px 20px;
-    min-height: 70vh;
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/images/form.svg");
+    background-repeat: no-repeat;
+    background-size: 90vh;
+    background-position: bottom right;
+}
+
+.cadastroForm {
+    width: 700px;
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cadastroForm input {
+    display: block;
+    margin: 5px 1px;
+
+    width: 100%;
+}
+
+.cadastroForm .nameForm input, .cadastroForm .passForm input{
+    display: inline-block;
+    width: auto;
+}
+
+.submitForm {
+    margin-top: 20px;
+}
+
+.submitForm input{
+    margin-top: 20px;
+    width: calc(100% / 3);
+    margin: auto;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.submitForm input:hover {
+    transform: scale(1.05);
+    transition: .2s;
 }

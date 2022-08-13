@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import styles from '../styles/Cadastro.module.css'
 
 export default function Cadastro(){
@@ -24,7 +25,7 @@ export default function Cadastro(){
             let user = {
                 id: userData.length,
                 name: name,
-                lastName: lastName,
+                lastName: lastName.toCa,
                 fullName: `${name} ${lastName}`,
                 cpf: cpf,
                 email: email,
@@ -59,17 +60,25 @@ export default function Cadastro(){
 
     return(
         <main className={styles.cadastro}>
-            <h1>Cadastro</h1>
-            <form>
-                <input type="text" placeholder="Nome" required onChange={(e) => setName(e.target.value)}/>
-                <input type="text" placeholder="Sobrenome" required onChange={(e) => setLastName(e.target.value)}/>
-                <input type="number" placeholder="CPF" required onChange={(e) => setCpf(e.target.value)}/>
-                <input type="email" placeholder="Email" required onChange={(e) => setEmail(e.target.value)}/>
-                <input type="password" placeholder="Senha" required onChange={(e) => setPassword(e.target.value)}/>
-                <input type="password" placeholder="Confirmar Senha" required onChange={(e) => setPasswordConfirm(e.target.value)}/>
-                
-                <input type="submit" placeholder="Cadastrar" value="Enviar" onClick={cadastrar}/>
-            </form>
+            <div className={styles.cadastroForm}>
+                <h1>Cadastro</h1>
+                <form>
+                    <div className={styles.nameForm}>
+                        <input type="text" placeholder="Nome" required onChange={(e) => setName(e.target.value)}/>
+                        <input type="text" placeholder="Sobrenome" required onChange={(e) => setLastName(e.target.value)}/>
+                    </div>
+                    <input type="number" placeholder="CPF" required onChange={(e) => setCpf(e.target.value)}/>
+                    <input type="email" placeholder="Email" required onChange={(e) => setEmail(e.target.value)}/>
+                    <div className={styles.passForm}>
+                        <input type="password" placeholder="Senha" required onChange={(e) => setPassword(e.target.value)}/>
+                        <input type="password" placeholder="Confirmar Senha" required onChange={(e) => setPasswordConfirm(e.target.value)}/>
+                    </div>
+                    <div className={styles.submitForm}>
+                        <input type="submit" value="Cadastrar-se" onClick={cadastrar}/>
+                    </div>
+                </form>
+                <p>Já tem uma conta? <Link href="/login">Entrar</Link> </p>
+            </div>
         </main>
     )
 }
