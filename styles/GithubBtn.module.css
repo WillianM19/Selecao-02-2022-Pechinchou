@@ -1,7 +1,6 @@
 .githubBtn {
-    background-color: #333;
+    background-color: var(--main-color);
     color: white;
-    border: 1px solid var(--main-color);
     padding: 5px;
     width: 500px;
     border-radius: 10px;

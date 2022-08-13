@@ -1,6 +1,7 @@
 import styles from '../styles/Denunciar.module.css'
 import Btn from '../components/Btn'
 import Head from 'next/head'
+import Router from 'next/router'
 import {useState, useEffect} from 'react'
 
 export default function Denunciar(){
@@ -66,6 +67,7 @@ export default function Denunciar(){
             //Exibe no console e alerta
             console.log(complaintsData)
             alert("Denúncia realizada com sucesso!")
+            Router.push("/denuncias")
             
         } else {
             alert("Você deve estar logado para registrar uma denúncia")

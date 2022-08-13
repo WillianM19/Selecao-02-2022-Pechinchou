@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <main className={styles.home}>
         <div className={styles.homeContent}>
-          <Image src="/images/logo.svg" width="250px" height="250px" />
+          <Image src="/images/logo.svg" width="250px" height="250px" alt="logo" />
           <div className={styles.homeHeroContent}>
             <h1>Green Save</h1>
             <p>Bem vindo ao Green Save!</p> 
