@@ -34,3 +34,9 @@
     align-items: center;
     gap: 10px;
 }
+
+.gitHubBtn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}

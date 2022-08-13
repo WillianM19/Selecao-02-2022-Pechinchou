@@ -29,6 +29,7 @@ export default function NavBar(){
                     <li><Link href="/"><a>Início</a></Link></li>
                     <li><Link href="/denuncias"><a>Denúncias</a></Link></li>
                     <li><Link href="/denunciar"><a>Nova Denúncia</a></Link></li>
+                    <li><Link href="/sobre"><a>Sobre</a></Link></li>
                 </ul>
                 {(activeUser || activeUser != null) ? (
                     <ul className={styles.sectionItens}>

@@ -1,3 +1,4 @@
+import GithubBtn from '../components/GithubBtn'
 import styles from '../styles/Sobre.module.css'
 export default function Sobre(){
     return(
@@ -59,7 +60,9 @@ export default function Sobre(){
             <section>
                 <h2>Sobre Mim</h2>
                 <p>Sou Willian, estudante de análise e desenvimento de sistemas - IFRN</p>
-                <p>Veja este projeto no github</p>
+                <div className={styles.gitHubBtn}>
+                    <GithubBtn />
+                </div>
             </section>
         </main>
     )

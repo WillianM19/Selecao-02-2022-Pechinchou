@@ -1,0 +1,14 @@
+.githubBtn {
+    background-color: #333;
+    color: white;
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    width: 500px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
