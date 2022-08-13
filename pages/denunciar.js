@@ -1,5 +1,5 @@
 import styles from '../styles/Denunciar.module.css'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Btn from '../components/Btn'
 
 export default function Denunciar(){
@@ -16,7 +16,10 @@ export default function Denunciar(){
     const [description, setDescription] = useState()
 
     //Pegar sessão atual
-    let activeUser = JSON.parse(localStorage.getItem("activeUser"))
+    const [activeUser, setActiveUser] = useState()
+    useEffect(() => {
+        setActiveUser(JSON.parse(localStorage.getItem("activeUser")))
+    }, []);
 
     //cadastrar denúncia
     function registrarDenuncia(e){
@@ -53,6 +56,7 @@ export default function Denunciar(){
 
             //Exibe no console e alerta
             console.log(complaintsData)
+            alert("Denúncia realizada com sucesso!")
             
         } else {
             alert("Você deve estar logado para registrar uma denúncia")
@@ -85,7 +89,7 @@ export default function Denunciar(){
                     <div className={styles.denunciaContainer}>
                         <h2>Descrição do Crime</h2>
                         <select placeholder="Selecione o tipo do crime..." onChange={(e) => setType(e.target.value)} required>
-                            <option value="Não indicado" key="select-none" selected>Selecione um tipo...</option>
+                            <option value="Não indicado" key="select-none" selected>Selecione um tipo de crime...</option>
                             <option value="Crime contra a fauna" key="select-fauna">Crime contra a fauna</option>
                             <option value="Crime contra a flora" key="select-flora">Crime contra a flora</option>
                             <option value="Ordenamento urbano" key="select-urbano">Crime contra o ordenamento urbano</option>
