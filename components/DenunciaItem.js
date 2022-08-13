@@ -30,7 +30,6 @@ export default function DenunciaItem({item}){
             {activeUser != null &&
             (item.userid == activeUser.id) ? (
                 <div className={styles.denunciaItemButtons}>
-                    <EditarApagarDenuncia type="editar" idDenuncia={item.id}/>
                     <EditarApagarDenuncia type="apagar" idDenuncia={item.id}/>
                 </div>
             ) : (

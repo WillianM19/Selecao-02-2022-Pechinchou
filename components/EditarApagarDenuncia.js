@@ -19,6 +19,12 @@ export default function EditarApagarDenuncia({type, idDenuncia}){
             
         } else if (type == "apagar"){
             setComplaintsData(complaintsData.splice(idDenuncia, 1))
+
+            //Re ordenar ids
+            for (let i = 0; i < complaintsData.length; i++){
+                complaintsData[i].id = i
+            }
+
             localStorage.setItem("complaintsData", JSON.stringify(complaintsData))
             console.log(complaintsData)
             alert(`Denúncia apagada!`)
