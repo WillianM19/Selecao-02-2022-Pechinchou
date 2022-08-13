@@ -88,8 +88,8 @@ export default function Denunciar(){
                             <option value="Não indicado" key="select-none" selected>Selecione um tipo...</option>
                             <option value="Crime contra a fauna" key="select-fauna">Crime contra a fauna</option>
                             <option value="Crime contra a flora" key="select-flora">Crime contra a flora</option>
-                            <option value="Crime contra o ordenamento urbano" key="select-urbano">Crime contra o ordenamento urbano</option>
-                            <option value="Ordenamento urbano" key="select-patrimonio">Crime contra o patrimônio cultural</option>
+                            <option value="Ordenamento urbano" key="select-urbano">Crime contra o ordenamento urbano</option>
+                            <option value="Patrimônio cultural" key="select-patrimonio">Crime contra o patrimônio cultural</option>
                             <option value="Poluição" key="select-poluicao">Poluição</option>
                             <option value="Outro..." key="select-outro">Outro...</option>
                         </select>
