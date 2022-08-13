@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Cadastro.module.css'
 import Router from 'next/router';
@@ -13,6 +13,14 @@ export default function Cadastro(){
 
     const [passwordConfirm, setPasswordConfirm] = useState()
 
+    const [userData, setUserData] = useState()
+    useEffect(() => {
+        try {
+            setUserData(JSON.parse(localStorage.getItem("userData")))
+        } catch {
+            setUserData([])
+        }
+    }, []);
 
     function cadastrar(e){
         e.preventDefault()
@@ -20,7 +28,7 @@ export default function Cadastro(){
         if(password == passwordConfirm){ //checa se a senha de confirmação é igual
 
             //Resgate de dados
-            let userData = JSON.parse(localStorage.getItem("userData"))
+            
 
             //criação do objeto de usuário
             let user = {

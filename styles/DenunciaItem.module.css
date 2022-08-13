@@ -20,8 +20,12 @@
 .description {
     border: 1px solid rgba(51, 51, 51, 0.397);
     padding: 5px 10px;
-    min-height: 100px;
+    height: 200px;
     border-radius: 10px;
+
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+
 }
 
 .denunciaTipo {

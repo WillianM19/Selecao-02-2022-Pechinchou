@@ -1,6 +1,13 @@
 import styles from '../styles/DenunciaItem.module.css'
+import { useState, useEffect } from 'react'
 
 export default function DenunciaItem({item}){
+    //Pegar sessão atual
+    const [activeUser, setActiveUser] = useState()
+    useEffect(() => {
+        setActiveUser(JSON.parse(localStorage.getItem("activeUser")))
+    }, []);
+
     return(
         <div className={styles.denunciaItem}>
             <h2>{item.title}</h2>
@@ -19,12 +26,12 @@ export default function DenunciaItem({item}){
                 <br/>
             </div>
 
-            {(item.userid == JSON.parse(localStorage.getItem("activeUser")).id) ? (
+            {activeUser != null &&
+            (item.userid == activeUser.id) ? (
                 <p>Você pode editar esta denuncia</p>
             ) : (
                 <></>
             )
-
             }
         </div>
     )

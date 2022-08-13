@@ -21,14 +21,22 @@ export default function Denunciar(){
         setActiveUser(JSON.parse(localStorage.getItem("activeUser")))
     }, []);
 
+    //Pegar base de dados das denúncias
+    const [complaintsData, setComplaintsData] = useState()
+    useEffect(() => {
+        try {
+            setComplaintsData(JSON.parse(localStorage.getItem("complaintsData")))
+        } catch {
+            setComplaintsData([])
+        }
+    }, []);
+
+
     //cadastrar denúncia
     function registrarDenuncia(e){
         e.preventDefault()
 
         if(activeUser != null){ //Se usuário estiver logado
-
-            //Pegar base de dados das denúncias
-            let complaintsData = JSON.parse(localStorage.getItem("complaintsData"))
 
             //Criar objeto de denúncia
             let complaint = {

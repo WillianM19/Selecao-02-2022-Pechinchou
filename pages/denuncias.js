@@ -7,7 +7,11 @@ export default function Denuncias(){
     //Pegar base de dados das denúncias
     const [complaintsData, setComplaintsData] = useState()
     useEffect(() => {
-        setComplaintsData(JSON.parse(localStorage.getItem("complaintsData")))
+        try {
+            setComplaintsData(JSON.parse(localStorage.getItem("complaintsData")))
+        } catch {
+            setComplaintsData(null)
+        }
     }, [])
 
     return(
