@@ -1,5 +1,6 @@
 import styles from '../styles/DenunciaItem.module.css'
 import { useState, useEffect } from 'react'
+import EditarApagarDenuncia from './EditarApagarDenuncia';
 
 export default function DenunciaItem({item}){
     //Pegar sessão atual
@@ -28,7 +29,10 @@ export default function DenunciaItem({item}){
 
             {activeUser != null &&
             (item.userid == activeUser.id) ? (
-                <p>Você pode editar esta denuncia</p>
+                <div className={styles.denunciaItemButtons}>
+                    <EditarApagarDenuncia type="editar" idDenuncia={item.id}/>
+                    <EditarApagarDenuncia type="apagar" idDenuncia={item.id}/>
+                </div>
             ) : (
                 <></>
             )

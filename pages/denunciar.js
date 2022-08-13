@@ -86,17 +86,17 @@ export default function Denunciar(){
                         <div className={styles.denunciaContainer}>
                             <h2>Informações Gerais</h2>
                             <div>
-                                <input type="text" placeholder="Titulo da denúncia..." onChange={(e) => setTitle(e.target.value)}/>
-                                <input type="time" onChange={(e) => setTime(e.target.value)}/>
-                                <input type="date" onChange={(e) => setDate(e.target.value)}/>
+                                <input type="text" placeholder="Titulo da denúncia..." onChange={(e) => setTitle(e.target.value)} required/>
+                                <input type="time" placeholder="Hora do ocorrido..." onChange={(e) => setTime(e.target.value)} required/>
+                                <input type="date" placeholder="Data do ocorrido..." onChange={(e) => setDate(e.target.value)} required/>
                             </div>
                         </div>
                         <div className={styles.denunciaContainer}>
                             <h2>Localidade</h2>
                             <div>
-                                <input type="text" placeholder="Local do ocorrido..." onChange={(e) => setPlace(e.target.value)}/>
-                                <input type="number" placeholder="Latitude..." onChange={(e) => setLatitude(e.target.value)}/>
-                                <input type="number" placeholder="Longitude..." onChange={(e) => setLongitude(e.target.value)}/>
+                                <input type="text" placeholder="Local do ocorrido..." onChange={(e) => setPlace(e.target.value)} required/>
+                                <input type="number" placeholder="Latitude..." onChange={(e) => setLatitude(e.target.value)} required/>
+                                <input type="number" placeholder="Longitude..." onChange={(e) => setLongitude(e.target.value)} required/>
                             </div>
                         </div>
                         <div className={styles.denunciaContainer}>
@@ -110,12 +110,11 @@ export default function Denunciar(){
                                 <option value="Poluição" key="select-poluicao">Poluição</option>
                                 <option value="Outro..." key="select-outro">Outro...</option>
                             </select>
-                            <textarea cols="30" rows="10" placeholder="Dê uma breve descrição do ocorrido..." onChange={(e) => setDescription(e.target.value)}></textarea>
-                        </div>
-                        <div>
+                            <textarea cols="30" rows="10" placeholder="Dê uma breve descrição do ocorrido..." onChange={(e) => setDescription(e.target.value)} required></textarea>
                             <input type="submit" value="Denunciar!" onClick={registrarDenuncia} />
                         </div>
-                        
+                        <div>
+                        </div>
                     </form>
                 </main>
             </>

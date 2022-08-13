@@ -37,3 +37,11 @@
     text-align: center;
     color: white;
 }
+
+.denunciaItemButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 20px 0;
+}

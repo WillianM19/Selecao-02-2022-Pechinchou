@@ -30,11 +30,13 @@
 }
 .denunciaContainer input {
     width: 200px;
+    margin: 5px;
 }
 .denunciaContainer select, .denunciaContainer textarea{
     width: 400px;
     display: block;
     resize: none;
+    margin: 5px;
 }
 
 

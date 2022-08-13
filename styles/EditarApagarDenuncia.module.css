@@ -1,0 +1,18 @@
+.eADenuncia {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    width: 100px;
+    
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.219);
+}
+
+.eADenuncia:hover{
+    transform: scale(1.05);
+    transition: .2s;
+}

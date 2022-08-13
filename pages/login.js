@@ -2,20 +2,28 @@ import Link from 'next/link'
 import styles from '../styles/Login.module.css'
 import Router from 'next/router';
 import Head from 'next/head';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 
 export default function Login(){
+
 
     //Variáveis
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
+    //Resgate de dados
+    const [userData, setUserData] = useState()
+    useEffect(() => {
+        try {
+            setUserData(JSON.parse(localStorage.getItem("userData")))
+        } catch {
+            setUserData([])
+        }
+    }, []);
+
     function iniciarSessao(e){
         e.preventDefault()
-
-        //Resgate de dados
-        let userData = JSON.parse(localStorage.getItem("userData"))
 
         //Busca por usuário dentro do objeto para comparação
         let auxNotFound = 0;
@@ -25,7 +33,7 @@ export default function Login(){
                 alert("Sessão iniciada com sucesso!")
                 Router.push("/denunciar")
                 break
-            } else { //Procurar depois forma melhor de saber quando o usúario é inexistente
+            } else {
                 auxNotFound++
             }
         }
