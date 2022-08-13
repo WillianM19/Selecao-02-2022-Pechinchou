@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import styles from '../styles/Login.module.css'
-import {useState} from 'react'
 import Router from 'next/router';
+import Head from 'next/head';
+import {useState} from 'react'
+
 
 export default function Login(){
 
@@ -34,16 +36,21 @@ export default function Login(){
     }
 
     return(
-        <main className={styles.login}>
-            <div className={styles.loginForm}>
-                <h1>Fazer Login</h1>
-                <form>
-                    <input type="text" placeholder="Seu Email..." required onChange={(e) => setEmail(e.target.value)}></input>
-                    <input type="password" placeholder="Sua Senha..." required onChange={(e) => setPassword(e.target.value)}></input>
-                    <input type="submit" value="Entrar" onClick={iniciarSessao}></input>
-                </form>
-                <p>Ainda não tem uma conta? <Link href="/cadastro"><a>Cadastre-se</a></Link></p>
-            </div>
-        </main>
+        <>
+            <Head>
+                <title>Entrar - Green Save</title>
+            </Head>
+            <main className={styles.login}>
+                <div className={styles.loginForm}>
+                    <h1>Fazer Login</h1>
+                    <form>
+                        <input type="text" placeholder="Seu Email..." required onChange={(e) => setEmail(e.target.value)}></input>
+                        <input type="password" placeholder="Sua Senha..." required onChange={(e) => setPassword(e.target.value)}></input>
+                        <input type="submit" value="Entrar" onClick={iniciarSessao}></input>
+                    </form>
+                    <p>Ainda não tem uma conta? <Link href="/cadastro"><a>Cadastre-se</a></Link></p>
+                </div>
+            </main>
+        </>
     )
 }

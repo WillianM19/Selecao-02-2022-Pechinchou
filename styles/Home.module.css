@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.616), rgba(255, 255, 255, 0.616)), url(/images/heroBackground.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.404), rgba(255, 255, 255, 0.404)), url(/images/heroBackground.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
