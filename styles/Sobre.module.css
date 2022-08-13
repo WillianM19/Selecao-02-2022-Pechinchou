@@ -1,0 +1,36 @@
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    list-style-position: inside;
+}
+.sobre li {
+    margin: 5px 0;
+    list-style-type: square;
+}
+.sobre h1{
+    font-size: 30pt;
+    margin: 20px 0;
+}
+.sobre h2 {
+    font-size: 20pt;
+}
+.sobre h1, .sobre h2, .sobre ul, .sobre p{
+    margin: 10px 0;
+}
+.sobre section{
+    background-color: white;
+    padding: 30px 40px;
+    width: 60vw;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid var(--main-color);
+}
+.checkboxItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

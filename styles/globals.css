@@ -30,7 +30,11 @@ input, select {
   border-radius: 10px;
   background-color: var(--main-color);
 }
-
+input[type=checkbox]{
+  min-width: 20px;
+  height: 20px;
+  margin: 0;
+}
 input::placeholder {
   color: rgba(238, 238, 238, 0.589);
 }
