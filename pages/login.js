@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/Login.module.css'
 import {useState} from 'react'
+import Router from 'next/router';
 
 export default function Login(){
 
@@ -20,6 +21,7 @@ export default function Login(){
             if (userData[i].email == email && userData[i].password == password){ //Se email e senhas forem corretas
                 localStorage.setItem("activeUser", JSON.stringify(userData[i]))
                 alert("Sessão iniciada com sucesso!")
+                Router.push("/denunciar")
                 break
             } else { //Procurar depois forma melhor de saber quando o usúario é inexistente
                 auxNotFound++

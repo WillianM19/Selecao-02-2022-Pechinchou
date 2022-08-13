@@ -21,7 +21,7 @@ export default function NavBar(){
     return (
         <header className={styles.navbar}>
             <div className={styles.logo}>
-                <Image src="/images/logo.svg" width="50px" height="50px"/>
+                <Image src="/images/logo.svg" width="50px" height="50px" alt="logo"/>
                 <h1>Green Save</h1>
             </div>
             <nav>

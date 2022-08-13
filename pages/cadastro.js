@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Cadastro.module.css'
+import Router from 'next/router';
 
 export default function Cadastro(){
     //Variáveis
@@ -50,6 +51,7 @@ export default function Cadastro(){
                 //Exibir no console o array e alerta
                 console.log(JSON.parse(localStorage.getItem("userData"))) 
                 alert("Usuário cadastrado com sucesso!")
+                Router.push("/login")
             }
 
         } else {
