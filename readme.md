@@ -46,3 +46,17 @@ npm start
 ## Mais Informações
 
 - Tempo para estudo, criação e entrega do projeto: 6 Dias
+
+## Outras Screenshots
+
+**Login**
+![](/green-save/public/screenshots/Login.png)
+
+**Cadastro**
+![](/green-save/public/screenshots/Cadastro.png)
+
+**Denúncia**
+![](/green-save/public/screenshots/Denúncia.png)
+
+**Denúncias**
+![](/green-save/public/screenshots/Denúncias.png)
