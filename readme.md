@@ -12,7 +12,7 @@ Sistema básico para denúncias de crimes ambientais, criado para o processo sel
 git clone https://github.com/WillianM19/Selecao-02-2022-Pechinchou
 ```
 
-2. Instale as dependencias
+2. Instale as dependências
 
 ```bash
 npm install
