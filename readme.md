@@ -49,14 +49,10 @@ npm start
 
 ## Outras Screenshots
 
-**Login**
 ![](/public/screenshots/Login.png)
 
-**Cadastro**
 ![](/public/screenshots/Cadastro.png)
 
-**Denúncia**
 ![](/public/screenshots/Denúncia.png)
 
-**Denúncias**
 ![](/public/screenshots/Denúncias.png)
